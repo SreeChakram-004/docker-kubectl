@@ -1,0 +1,12 @@
+apiVersion: skaffold/v4beta6
+kind: Config
+metadata:
+  name: task-
+build:
+  artifacts:
+    - image: sreechakram/my-express-app
+      docker:
+        dockerfile: Dockerfile
+manifests:
+  rawYaml:
+    - deployment.yml

@@ -1,0 +1,12 @@
+apiVersion: skaffold/v2beta23
+kind: Config
+build:
+  artifacts:
+    - image: sreechakram/my-express-app
+      context: .
+      docker:
+        dockerfile: Dockerfile
+deploy:
+  kubectl:
+    manifests:
+      - deployment.yaml
